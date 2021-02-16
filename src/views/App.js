@@ -5,11 +5,11 @@ const App = () => {
     return (
         <div className="container">
             {
-                data.map((project, index) => 
-                    project.map((note, index) =>
+
+                    data["Learn React"].map((note, index) =>
                         <NoteShell key={index} title={note.title} text={note.text} url={note.url} type={note.type}/>
                     )                    
-                )
+                
             }
         </div>
     )
