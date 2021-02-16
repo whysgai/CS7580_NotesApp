@@ -1,5 +1,6 @@
 import {NOTE_TYPE} from '../data/data.js'
 import NoteText from './NoteText.js'
+import NoteURL from './NoteURL.js'
 
 const NoteShell = props =>
     <div className="col gy-4">
