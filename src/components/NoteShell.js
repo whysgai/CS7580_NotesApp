@@ -4,6 +4,8 @@ import NoteURL from './NoteURL.js'
 
 const NoteShell = props =>
     <div className="col gy-4">
+        {console.log(props.text)}
+        <p>{props.text}</p>
         <div className="card">
            {
                 props.type === NOTE_TYPE.TEXT &&
