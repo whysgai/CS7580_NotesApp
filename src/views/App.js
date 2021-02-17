@@ -1,20 +1,23 @@
 import data from '../data/data.js';
 import Project from '../components/Project.js';
+import NoteList from '../components/NoteList.js'
+
 
 
 const App = () => {
     return (
         <div className="container">
-            {
-                Object.keys(data).map((project, index) => 
-                    // console.log(project);
-                    <Project key={index} name={project} notes={data[project]}/>
-                    // data[project].map((note, index) => {
-                    //     console.log(note);
-                        
-                    // });                    
-                )
-            }
+            <div>
+                <div className="col-3 bg-dark"></div>            
+                <div className="col-9">
+                    <NoteList notes={data}/>
+                    {/* {
+                        Object.keys(data).map((project, index) => 
+                            <Project key={index} name={project} notes={data[project]}/>                
+                        )
+                    } */}
+                </div>
+            </div>
         </div>
     )
 }
