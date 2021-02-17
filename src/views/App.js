@@ -14,11 +14,6 @@ const App = () => {
                 </div>            
                 <div className="col-9">
                     <NoteList projects={data}/>
-                    {/* {
-                        Object.keys(data).map((project, index) => 
-                            <Project key={index} name={project} notes={data[project]}/>                
-                        )
-                    } */}
                 </div>
             </div>
         </div>
