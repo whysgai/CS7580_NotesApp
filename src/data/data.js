@@ -33,6 +33,11 @@ export default {
             type: NOTE_TYPE.LINK,
             url: "https://loremipsum.io/generator/",
             text: "Lorem Ipsum generator"
+        },
+        {
+            type: NOTE_TYPE.LINK,
+            url: "https://www.npr.org",
+            text: ""
         }
     ]
 }
