@@ -8,15 +8,14 @@ import ProjectFilter from '../components/ProjectFilter.js';
 
 const App = () => {
     const [visibleProjects, viewProject] = useState([]);
-
     return (
         <div className="container">
             {console.log(visibleProjects)}
             <div className="row">
-                <div className="col-3">
+                <div className="project-filter">
                     <ProjectFilter projects={data}/>
                 </div>            
-                <div className="col-9">
+                <div className="note-list">
                     <NoteList projects={data}/>
                 </div>
             </div>

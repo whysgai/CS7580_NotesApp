@@ -1,0 +1,15 @@
+.project-filter {
+    margin: 5vh 2% 0 0; 
+    width: 23%;
+    height: 95vh;
+}
+
+.note-list {
+    margin-top: 5vh; 
+    width: 75%;
+    height: 95vh;
+}
+
+.project-card {
+    margin-bottom: 2%;
+}

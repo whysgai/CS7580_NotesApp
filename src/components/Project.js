@@ -1,7 +1,7 @@
 import NoteShell from './NoteShell.js';
 
 const Project = props =>
-    <div className="col gy-4">
+    <div className="project-card">
         <div className="card">
             <div className="card-body">            
                 <h2 className="card-title">{props.name}</h2>
