@@ -4,6 +4,12 @@
     height: 95vh;
 }
 
+.project-filter-label {
+    margin-bottom: 0;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
 .note-list {
     margin-top: 5vh; 
     width: 75%;
