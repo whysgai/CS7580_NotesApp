@@ -1,4 +1,5 @@
 import NewTextNote from './NewTextNote.js';
+import NewLinkNote from './NewLinkNote.js';
 
 const NewNote = props =>
     <div className="">            
@@ -9,6 +10,7 @@ const NewNote = props =>
         </div>
         <div>
             <NewTextNote/>
+            <NewLinkNote/>
         </div>
     </div>
 
