@@ -1,7 +1,9 @@
-import Project from '../components/Project.js';
+import NewNote from './NewNote.js'
+import Project from './Project.js';
 
 const NoteList = props =>
-    <div>            
+    <div>
+        <NewNote/>            
         {
             Object.keys(props.projects).map((project, index) => 
                 (props.visibleProjects.includes(project) || props.visibleProjects.length === 0) ?
