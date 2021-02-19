@@ -6,7 +6,7 @@ const ProjectFilter = props =>
                 Object.keys(props.projects).map((project, index) =>
                     <label className="list-group-item list-group-item-action project-filter-label" key={index}>
                         <span>{project}</span>                        
-                        <input class="form-check-input" type="checkbox" value=""></input>                                              
+                        <input className="form-check-input" type="checkbox" value=""></input>                                              
                     </label>               
                 )
             }
