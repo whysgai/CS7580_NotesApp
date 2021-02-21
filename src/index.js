@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// $ and Popper are used by bootstrap, do not remove these imports
+// even though they appear unnecessary
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.css';
 import App from './views/App';
