@@ -49,7 +49,7 @@ const App = () => {
                     />
                 </div>            
                 <div className="note-list">
-                    <NewNote/> 
+                    <NewNote projects={projects}/> 
                     <NoteList projects={projects} visibleProjects={visibleProjects}/>
                 </div>
             </div>
