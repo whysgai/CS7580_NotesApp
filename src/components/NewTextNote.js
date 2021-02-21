@@ -14,9 +14,9 @@ const NewTextNote = props =>
             }                      
         </select>
         <label>Title:</label>
-        <input type="text"></input>
+        <input type="text" onChange={e => props.setNewTextNote({...props.newTextNote, title : e.target.value})}></input>
         <label>Text:</label>
-        <textarea type="textarea"></textarea>
+        <textarea type="textarea" onChange={e => props.setNewTextNote({...props.newTextNote, text : e.target.value})}></textarea>
     </div>
 
 export default NewTextNote;

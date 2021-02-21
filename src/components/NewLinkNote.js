@@ -13,9 +13,9 @@ const NewLinkNote = props =>
             } 
         </select>
         <label>URL:</label>
-        <input type="url"></input>
+        <input type="url" onChange={e => props.setNewLinkNote({...props.newLinkNote, url : e.target.value})}></input>
         <label>Text:</label>
-        <input type="text"></input>
+        <input type="text" onChange={e => props.setNewLinkNote({...props.newLinkNote, text : e.target.value})}></input>
     </div>
 
 export default NewLinkNote;
