@@ -9,8 +9,8 @@ const NewNote = props =>
             <button type="button" className="btn btn-outline-dark">URL Note</button>
         </div>
         <div>
-            <NewTextNote projects={props.projects} newTextNote={props.newTextNote} setNewTextNote={props.setNewTextNote}/>
-            <NewLinkNote projects={props.projects} newLinkNote={props.newLinkNote} setNewLinkNote={props.setNewLinkNote}/>
+            <NewTextNote projects={props.projects} newTextNote={props.newTextNote} setNewTextNote={props.setNewTextNote} addNewNote={props.addNewNote}/>
+            <NewLinkNote projects={props.projects} newLinkNote={props.newLinkNote} setNewLinkNote={props.setNewLinkNote} addNewNote={props.addNewNote}/>
         </div>
     </div>
 

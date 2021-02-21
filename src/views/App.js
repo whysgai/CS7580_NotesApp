@@ -46,6 +46,14 @@ const App = () => {
         setProjects(newProjects);
     }
 
+    const addNewNote = (project, note) => {
+        console.log("Add new note", note, " to project ", project);
+        let newProjects = _.cloneDeep(projects);
+        newProjects[project].push(note);
+        console.log(newProjects);
+        setProjects(newProjects);
+    }
+
     return (
         <div className="container">
             {console.log("new text note: ", newTextNote, "new link note: ", newLinkNote)}         
@@ -66,6 +74,7 @@ const App = () => {
                         setNewTextNote={setNewTextNote}
                         newLinkNote={newLinkNote}
                         setNewLinkNote={setNewLinkNote}
+                        addNewNote={addNewNote}
                     /> 
                     <NoteList projects={projects} visibleProjects={visibleProjects}/>
                 </div>
