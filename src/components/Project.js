@@ -1,4 +1,4 @@
-// import { Collapse } from bootstrap;
+
 
 import NoteShell from './NoteShell.js';
 
