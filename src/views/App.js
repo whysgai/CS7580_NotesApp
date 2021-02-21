@@ -1,14 +1,16 @@
 import { useState } from "react";
+import _ from 'lodash';
 import data from '../data/data.js';
 import Project from '../components/Project.js';
 import NoteList from '../components/NoteList.js';
-import ProjectFilter from '../components/ProjectFilter.js';
+import ProjectList from '../components/ProjectList.js';
 
 
 
 const App = () => {
     const [projects, setProjects] = useState(data);
     const [visibleProjects, setVisible] = useState([]);
+    const [newProject, setNewProject] = useState("");
 
     const updateProjectFilter = project => {
         console.log("Filtering project:", project);
@@ -25,11 +27,25 @@ const App = () => {
         setVisible(newProjects);
     }
 
+    const addNewProject = () => {
+        console.log("New project title: " + newProject);
+        let newProjects = _.cloneDeep(projects);
+        newProjects[newProject] = [];
+        setProjects(newProjects);
+    }
+
     return (
         <div className="container">            
             <div className="row">
                 <div className="project-filter">
-                    <ProjectFilter projects={projects} visibleProjects={visibleProjects} updateProjectFilter={updateProjectFilter}/>
+                    <ProjectList 
+                        projects={projects}
+                        visibleProjects={visibleProjects}
+                        updateProjectFilter={updateProjectFilter}
+                        newProject={newProject}
+                        setNewProject={setNewProject}
+                        addNewProject={addNewProject}
+                    />
                 </div>            
                 <div className="note-list">
                     <NoteList projects={projects} visibleProjects={visibleProjects}/>

@@ -1,4 +1,4 @@
-const ProjectFilter = props =>
+const ProjectList = props =>
     <div className="">
         {console.log("Visible projects:", props.visibleProjects)}
         <div className="list-group">
@@ -11,9 +11,22 @@ const ProjectFilter = props =>
                     </label>               
                 )
             }
-            <div className="list-group-item list-group-item-action">+</div>
+            <div className="list-group-item">
+                <label className="input-group">
+                    <input type="text" className="form-control"
+                        placeholder="Project title..."
+                        value={props.newProject}
+                        onChange={e => props.setNewProject(e.target.value)}
+                    />
+                    <button className="btn btn-outline-secondary" type="button" 
+                        onClick={props.addNewProject}
+                    >
+                        +
+                    </button>
+                </label>
+            </div>
         </div>            
 
     </div>
 
-export default ProjectFilter;
+export default ProjectList;
