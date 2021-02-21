@@ -3,7 +3,7 @@ import Project from './Project.js';
 
 const NoteList = props =>
     <div>
-        <NewNote/>            
+                   
         {
             Object.keys(props.projects).map((project, index) => 
                 (props.visibleProjects.includes(project) || props.visibleProjects.length === 0) ?

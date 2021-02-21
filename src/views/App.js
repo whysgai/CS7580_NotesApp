@@ -2,6 +2,7 @@ import { useState } from "react";
 import _ from 'lodash';
 import data from '../data/data.js';
 import Project from '../components/Project.js';
+import NewNote from '../components/NewNote.js'
 import NoteList from '../components/NoteList.js';
 import ProjectList from '../components/ProjectList.js';
 
@@ -48,6 +49,7 @@ const App = () => {
                     />
                 </div>            
                 <div className="note-list">
+                    <NewNote/> 
                     <NoteList projects={projects} visibleProjects={visibleProjects}/>
                 </div>
             </div>
