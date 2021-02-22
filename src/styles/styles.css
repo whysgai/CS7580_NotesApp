@@ -10,6 +10,10 @@
     /* justify-content: space-around; */
 }
 
+.url-input:invalid {
+    color: red;
+}
+
 .note-list {
     margin-top: 5vh; 
     width: 75%;

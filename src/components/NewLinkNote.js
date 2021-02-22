@@ -13,9 +13,9 @@ const NewLinkNote = props =>
                 } 
             </select>
         </label>        
-        <label className="form-label">URL:
+        <label className="form-label">URL (requires protocol prefix):
             <input type="url" 
-                className="form-control"
+                className="form-control url-input"
                 onChange={e => props.setNewLinkNote({...props.newLinkNote, url : e.target.value})}
                 value={props.newLinkNote.url}
             />
