@@ -21,7 +21,7 @@ const ProjectFilterList = props =>
                         <ProjectFilter key={index} project={project} updateProjectFilter={props.updateProjectFilter}/>             
                     )
                 }
-                <NewProject newProject={props.newProject} setNewProject={props.setNewProject} projectAlert={props.projectAlert}/>              
+                <NewProject newProject={props.newProject} addNewProject={props.addNewProject} setNewProject={props.setNewProject} projectAlert={props.projectAlert}/>              
             </div>            
         </div>
     </div>

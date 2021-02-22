@@ -92,7 +92,6 @@ const App = () => {
 
     return (
         <div className="container">
-            {console.log("new text note: ", newTextNote, "new link note: ", newLinkNote)}         
             <div className="row">
                 <div className="project-filter">
                     <ProjectFilterList 

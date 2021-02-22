@@ -21,7 +21,7 @@ const NewLinkNote = props =>
             />
         </label>
         
-        <label className="forn-label">Text:
+        <label className="form-label">Text:
             <input type="text"
                 className="form-control" 
                 onChange={e => props.setNewLinkNote({...props.newLinkNote, text : e.target.value})}
