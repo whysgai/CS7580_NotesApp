@@ -44,7 +44,7 @@ const NewTextNote = props =>
         </button>
         {
             props.newTextAlert ?
-                <div class="alert alert-danger" role="alert">
+                <div className="alert alert-danger" role="alert">
                     Text notes must have a title OR text.
                 </div>
             : ""

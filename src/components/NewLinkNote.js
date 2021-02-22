@@ -22,11 +22,11 @@ const NewLinkNote = props =>
         </label>
         
         <label className="forn-label">Text:
-        <input type="text"
-            className="form-control" 
-            onChange={e => props.setNewLinkNote({...props.newLinkNote, text : e.target.value})}
-            value={props.newLinkNote.text}
-        />
+            <input type="text"
+                className="form-control" 
+                onChange={e => props.setNewLinkNote({...props.newLinkNote, text : e.target.value})}
+                value={props.newLinkNote.text}
+            />
         </label>        
         <button className="btn btn-primary col-12"
             onClick={() => {
@@ -42,7 +42,7 @@ const NewLinkNote = props =>
         </button>
         {
             props.newLinkAlert ?
-                <div class="alert alert-danger" role="alert">
+                <div className="alert alert-danger" role="alert">
                     Link notes must have a url.
                 </div>
             : ""
