@@ -5,7 +5,7 @@ import { NOTE_TYPE } from '../data/data.js'
 import Project from '../components/Project.js';
 import NewNote from '../components/NewNote.js'
 import NoteList from '../components/NoteList.js';
-import ProjectFilter from '../components/ProjectFilter.js';
+import ProjectFilterList from '../components/ProjectFilterList.js';
 
 
 
@@ -95,7 +95,7 @@ const App = () => {
             {console.log("new text note: ", newTextNote, "new link note: ", newLinkNote)}         
             <div className="row">
                 <div className="project-filter">
-                    <ProjectFilter 
+                    <ProjectFilterList 
                         projects={projects}
                         visibleProjects={visibleProjects}
                         updateProjectFilter={updateProjectFilter}
