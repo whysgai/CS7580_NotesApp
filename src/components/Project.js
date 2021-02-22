@@ -8,12 +8,14 @@ const Project = props =>
             <div className="card-body">            
                 <h2 className="card-title title-with-button">
                     <span>{props.name}</span> 
-                    <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target={`#project-${props.name}-collapse`} aria-expanded="true" aria-controls={`project-${props.name}-collapse`}>
+                    <button className="btn btn-primary" type="button" 
+                        data-bs-toggle="collapse" data-bs-target={`#project-${props.name.replace(" ", "_")}-collapse`} aria-expanded="true" aria-controls={`project-${props.name.replace(" ", "_")}-collapse`}
+                    >
                         Collapse
                     </button>
                 </h2>
             </div>
-            <div className="collapse.show" id={`project-${props.name}-collapse`}>
+            <div className="collapse.show" id={`project-${props.name.replace(" ", "_")}-collapse`}>
                 <ul className="list-group list-group-flush">
                     {
                         props.notes.map((note, index) => 
