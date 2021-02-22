@@ -15,7 +15,7 @@
 
 .filters-list {
     max-height: 80vh;
-    overflow-x: scroll;
+    /* overflow-y: scroll; */
 }
 
 .project-filter-label {
@@ -37,7 +37,7 @@
 
     .filters-list {
         max-height: 50vh;
-        overflow-x: scroll;
+        overflow-y: scroll;
     }
 }
 
