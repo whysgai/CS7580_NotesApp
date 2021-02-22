@@ -6,13 +6,12 @@ const NewTextNote = props =>
     <div className="card card-body">            
         <h3 className="card-title">New Note</h3>
         <label className="form-label">Project: 
-            <select className="form-control">
-                <option value={NO_PROJECT}>--No Project--</option>
+            <select className="form-control" id="new-text-project">
                 {
                     Object.keys(props.projects).map((project, index) =>
                         <option key={index}>{project}</option>                
                     )
-                }                      
+                }
             </select>
         </label>
         <label className="form-label">Title:
@@ -26,7 +25,8 @@ const NewTextNote = props =>
         <label className="form-label">Text:
             <textarea type="textarea" 
                 className="form-control"
-                onChange={e => props.setNewTextNote({...props.newTextNote, text : e.target.value})} value={props.newTextNote.text}
+                onChange={e => props.setNewTextNote({...props.newTextNote, text : e.target.value})} 
+                value={props.newTextNote.text}
             />
         </label>
         <button className="btn btn-primary col-12" 
@@ -41,6 +41,13 @@ const NewTextNote = props =>
         >
             +
         </button>
+        {
+            props.newTextAlert ?
+                <div class="alert alert-danger" role="alert">
+                    Text notes must have a title OR text.
+                </div>
+            : ""
+        }        
     </div>
 
 export default NewTextNote;

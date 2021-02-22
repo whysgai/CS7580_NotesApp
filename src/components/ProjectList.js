@@ -2,7 +2,9 @@ const ProjectList = props =>
     <div className="">
         {console.log("Visible projects:", props.visibleProjects)}
         <div className="list-group">
-            <div className="list-group-item list-group-item-dark">Filter projects:</div>
+            <div className="list-group-item list-group-item-dark">
+                <h3>Filter projects:</h3>
+            </div>
             {
                 Object.keys(props.projects).map((project, index) =>
                     <label className="list-group-item list-group-item-action project-filter-label" key={index}>

@@ -5,8 +5,7 @@ const NewLinkNote = props =>
     <div className="card card-body">            
         <h3 className="card-title">New Note</h3>
         <label className="form-label">Project:
-            <select className="form-control">
-                <option value={NO_PROJECT}>--No Project--</option>
+            <select className="form-control" id="new-link-project">
                 {
                     Object.keys(props.projects).map((project, index) =>
                         <option key={index}>{project}</option>                
@@ -28,19 +27,26 @@ const NewLinkNote = props =>
             onChange={e => props.setNewLinkNote({...props.newLinkNote, text : e.target.value})}
             value={props.newLinkNote.text}
         />
-        </label>
-        
+        </label>        
         <button className="btn btn-primary col-12"
             onClick={() => {
                 props.addNewNote(document.getElementById("new-link-project").value, props.newLinkNote);
                 props.setNewLinkNote({
-                    type: NOTE_TYPE.LINKT,
+                    type: NOTE_TYPE.LINK,
                     url: "",
                     text: ""
                 })
-            }
-
-        }>+</button>
+            }}
+        >
+            +
+        </button>
+        {
+            props.newLinkAlert ?
+                <div class="alert alert-danger" role="alert">
+                    Link notes must have a url.
+                </div>
+            : ""
+        }  
     </div>
 
 export default NewLinkNote;

@@ -18,12 +18,14 @@ const App = () => {
         type: NOTE_TYPE.TEXT,
         title: "",
         text: ""
-    })
+    });
+    const [newTextAlert, setNewTextAlert] = useState(false);
     const [newLinkNote, setNewLinkNote] = useState({
         type: NOTE_TYPE.LINK,
         url: "",
         text: ""
-    })
+    });
+    const [newLinkAlert, setNewLinkAlert] = useState(false);
 
     const updateProjectFilter = project => {
         console.log("Filtering project:", project);
@@ -56,11 +58,36 @@ const App = () => {
     }
 
     const addNewNote = (project, note) => {
-        console.log("Add new note", note, " to project ", project);
-        let newProjects = _.cloneDeep(projects);
-        newProjects[project].push(note);
-        console.log(newProjects);
-        setProjects(newProjects);
+        if (note.type === NOTE_TYPE.TEXT) {
+            if (note.title !== "" || note.text !=="") {
+                console.log("Add new note", note, " to project ", project);
+                let newProjects = _.cloneDeep(projects);
+                newProjects[project].push(note);
+                console.log(newProjects);
+                setProjects(newProjects);
+                setNewTextAlert(false);
+            } else {
+                setNewTextAlert(true);
+                window.setTimeout(() => {
+                    setNewTextAlert(false);
+                }, 10000);
+            }
+        } else if (note.type === NOTE_TYPE.LINK) {
+            if (note.url !== "") {
+                console.log("Add new note", note, " to project ", project);
+                let newProjects = _.cloneDeep(projects);
+                newProjects[project].push(note);
+                console.log(newProjects);
+                setProjects(newProjects);
+                setNewLinkAlert(false);
+            } else {
+                setNewLinkAlert(true);
+                window.setTimeout(() => {
+                    setNewLinkAlert(false);
+                }, 10000);
+            }
+        }
+
     }
 
     return (
@@ -85,6 +112,8 @@ const App = () => {
                         newLinkNote={newLinkNote}
                         setNewLinkNote={setNewLinkNote}
                         addNewNote={addNewNote}
+                        newTextAlert={newTextAlert}
+                        newLinkAlert={newLinkAlert}
                     /> 
                     <NoteList projects={projects} visibleProjects={visibleProjects}/>
                 </div>
