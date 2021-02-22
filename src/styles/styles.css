@@ -24,7 +24,7 @@
     justify-content: space-between;
 }
 
-@media (max-device-width: 400px) {
+@media (max-device-width: 800px) {
     .project-filter {
         margin: 5vh 2% 0 0; 
         width: 100%;
@@ -55,7 +55,7 @@
     margin-bottom: 2%;
 }
 
-@media (max-device-width: 400px) {
+@media (max-device-width: 800px) {
     .note-list {
         margin-top: 1vh; 
         width: 100%;
