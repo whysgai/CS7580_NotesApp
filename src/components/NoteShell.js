@@ -3,7 +3,7 @@ import NoteText from './NoteText.js'
 import NoteURL from './NoteURL.js'
 
 const NoteShell = props =>
-    <div className="list-group-item">
+    <div>
         {
             props.type === NOTE_TYPE.TEXT &&
                 <NoteText title={props.title} text={props.text} />

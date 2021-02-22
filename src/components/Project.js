@@ -17,7 +17,9 @@ const Project = props =>
                 <ul className="list-group list-group-flush">
                     {
                         props.notes.map((note, index) => 
-                            <NoteShell key={index} title={note.title} text={note.text} url={note.url} type={note.type}></NoteShell>
+                            <li className="list-group-item" key={index}>
+                                <NoteShell title={note.title} text={note.text} url={note.url} type={note.type}/>
+                            </li>                            
                         )
                     }
                 </ul>  
