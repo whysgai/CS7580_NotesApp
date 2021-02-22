@@ -6,8 +6,8 @@ const Project = props =>
     <div className="project-card">
         <div className="card">
             <div className="card-body">            
-                <h2 className="card-title">
-                    {props.name} 
+                <h2 className="card-title title-with-button">
+                    <span>{props.name}</span> 
                     <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target={`#project-${props.name}-collapse`} aria-expanded="true" aria-controls={`project-${props.name}-collapse`}>
                         Collapse
                     </button>
