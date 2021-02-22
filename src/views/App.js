@@ -13,6 +13,7 @@ const App = () => {
     const [projects, setProjects] = useState(data);
     const [visibleProjects, setVisible] = useState([]);
     const [newProject, setNewProject] = useState("");
+    const [projectAlert, setProjectAlert] = useState(false);
     const [newTextNote, setNewTextNote] = useState({
         type: NOTE_TYPE.TEXT,
         title: "",
@@ -41,9 +42,17 @@ const App = () => {
 
     const addNewProject = () => {
         console.log("New project title: " + newProject);
-        let newProjects = _.cloneDeep(projects);
-        newProjects[newProject] = [];
-        setProjects(newProjects);
+        if (!projects.hasOwnProperty(newProject)) {
+            let newProjects = _.cloneDeep(projects);
+            newProjects[newProject] = [];
+            setProjects(newProjects);
+        } else {
+            setProjectAlert(true);
+            window.setTimeout(() => {
+                setProjectAlert(false);
+            }, 10000);
+        }
+        
     }
 
     const addNewNote = (project, note) => {
@@ -66,6 +75,7 @@ const App = () => {
                         newProject={newProject}
                         setNewProject={setNewProject}
                         addNewProject={addNewProject}
+                        projectAlert={projectAlert}
                     />
                 </div>            
                 <div className="note-list">

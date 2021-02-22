@@ -12,19 +12,28 @@ const ProjectList = props =>
                 )
             }
             <div className="list-group-item">
-                <label className="input-group">
-                    <input type="text" className="form-control"
+                <label className="form-label" for="new-project-input">New Project</label>
+                <div className="input-group">
+                    <input type="text" className="form-control" id="new-project-input"
                         placeholder="Project title..."
                         value={props.newProject}
                         onChange={e => props.setNewProject(e.target.value)}
                     />
-                    <button className="btn btn-outline-secondary" type="button" 
+                    <button className="btn btn-primary" type="button" 
                         onClick={props.addNewProject}
                     >
                         +
                     </button>
-                </label>
+                </div>
             </div>
+            {
+                props.projectAlert ?
+                    <div className="alert alert-warning" role="alert">
+                        A project with that name already exists.
+                    </div>
+                : ""
+            }
+            
         </div>            
 
     </div>
