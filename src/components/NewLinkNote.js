@@ -3,7 +3,7 @@ import { NO_PROJECT } from '../data/data.js';
 
 const NewLinkNote = props =>
     <div className="card card-body">            
-        <h3 className="card-title">New Note</h3>
+        {/* <h3 className="card-title">New Note</h3> */}
         <label className="form-label">Project:
             <select className="form-control" id="new-link-project">
                 {
@@ -38,7 +38,7 @@ const NewLinkNote = props =>
                 })
             }}
         >
-            +
+            Create Link Note
         </button>
         {
             props.newLinkAlert ?

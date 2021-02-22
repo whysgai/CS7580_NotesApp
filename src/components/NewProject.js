@@ -1,3 +1,6 @@
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlus} from "@fortawesome/free-solid-svg-icons";
+
 const NewProject = props =>
     <div className="list-group-item">
         <label className="form-label" htmlFor="new-project-input">New Project</label>
@@ -10,7 +13,7 @@ const NewProject = props =>
             <button className={`btn btn-primary ${props.newProject === "" ? "disabled" : ""}`} type="button" 
                 onClick={props.addNewProject}
             >
-                +
+                <FontAwesomeIcon icon={faPlus} />
             </button>
             {
                 props.projectAlert ?

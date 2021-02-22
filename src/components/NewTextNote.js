@@ -4,7 +4,7 @@ import { NO_PROJECT } from '../data/data.js';
 
 const NewTextNote = props =>
     <div className="card card-body">            
-        <h3 className="card-title">New Note</h3>
+        {/* <h3 className="card-title">New Note</h3> */}
         <label className="form-label">Project: 
             <select className="form-control" id="new-text-project">
                 {
@@ -39,7 +39,7 @@ const NewTextNote = props =>
                 })
             }}
         >
-            +
+            Create Text Note
         </button>
         {
             props.newTextAlert ?
