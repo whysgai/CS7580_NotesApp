@@ -24,9 +24,10 @@ const NewTextNote = props =>
         </label>
         <label className="form-label">Text:
             <textarea type="textarea" 
-                className="form-control"
+                className="form-control text-area-whitespace"
                 onChange={e => props.setNewTextNote({...props.newTextNote, text : e.target.value})} 
                 value={props.newTextNote.text}
+                rows="5"
             />
         </label>
         <button className="btn btn-primary col-12" 

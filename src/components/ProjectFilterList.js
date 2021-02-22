@@ -1,4 +1,3 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import NewProject from "./NewProject";
 import ProjectFilter from "./ProjectFilter";
 
@@ -16,7 +15,7 @@ const ProjectFilterList = props =>
                 </h3>
                 
             </div>
-            <div className="collapse.show filters-list" id="project-filters">
+            <div className="collapse show filters-list" id="project-filters">
                 {
                     Object.keys(props.projects).map((project, index) =>
                         <ProjectFilter key={index} project={project} updateProjectFilter={props.updateProjectFilter}/>             

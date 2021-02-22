@@ -41,6 +41,14 @@
     }
 }
 
+.new-note {
+    margin-bottom: 2%;
+}
+
+.text-area-whitespace{
+    white-space: pre-wrap;
+}
+
 .url-input:invalid {
     color: red;
 }

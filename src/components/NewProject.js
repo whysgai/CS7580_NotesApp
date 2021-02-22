@@ -13,6 +13,7 @@ const NewProject = props =>
             <button className={`btn btn-primary ${props.newProject === "" ? "disabled" : ""}`} type="button" 
                 onClick={props.addNewProject}
             >
+                <span className="visually-hidden">Add New Project</span>
                 <FontAwesomeIcon icon={faPlus} />
             </button>
             {

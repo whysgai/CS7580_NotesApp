@@ -15,7 +15,7 @@ const Project = props =>
                     </button>
                 </h2>
             </div>
-            <div className="collapse.show" id={`project-${props.name.replace(" ", "_")}-collapse`}>
+            <div className="collapse show" id={`project-${props.name.replace(" ", "_")}-collapse`}>
                 <ul className="list-group list-group-flush">
                     {
                         props.notes.map((note, index) => 
