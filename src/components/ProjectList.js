@@ -19,7 +19,7 @@ const ProjectList = props =>
                         value={props.newProject}
                         onChange={e => props.setNewProject(e.target.value)}
                     />
-                    <button className="btn btn-primary" type="button" 
+                    <button className={`btn btn-primary ${props.newProject === "" ? "disabled" : ""}`} type="button" 
                         onClick={props.addNewProject}
                     >
                         +
