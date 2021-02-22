@@ -6,16 +6,16 @@ const NewNote = props =>
         <button type="button" className="btn btn-primary col-12" type="button" data-bs-toggle="collapse" data-bs-target="#new-note-types" aria-expanded="false" aria-controls="new-note-types">New Note</button>
         <div id="new-note-collapse-parent">
             <div className="btn-group col-12 collapse" id="new-note-types">
-                <button type="button" className="btn btn-outline-dark"
+                <input type="radio" className="btn-check" name="newNoteRadio" id="radioTextNote" autoComplete="off" 
                     data-bs-toggle="collapse" data-bs-target="#new-text-note" aria-expanded="false" aria-controls="new-text-note"
-                >
-                    Text Note
-                </button>
-                <button type="button" className="btn btn-outline-dark"
+                />
+                <label className="btn btn-outline-primary" htmlFor="radioTextNote">Text Note</label>
+
+                <input type="radio" className="btn-check" name="newNoteRadio" id="radioLinkNote" autoComplete="off" 
                     data-bs-toggle="collapse" data-bs-target="#new-link-note" aria-expanded="false" aria-controls="new-link-note"
-                >
-                    URL Note
-                </button>
+                />
+                <label className="btn btn-outline-primary" htmlFor="radioLinkNote">Link Note</label>
+
             </div>
             <div className="collapse" id="new-text-note"  data-bs-parent="#new-note-collapse-parent" >
                 <NewTextNote projects={props.projects} newTextNote={props.newTextNote} setNewTextNote={props.setNewTextNote} addNewNote={props.addNewNote} newTextAlert={props.newTextAlert}/>
