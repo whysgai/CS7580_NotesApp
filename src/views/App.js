@@ -48,6 +48,7 @@ const App = () => {
             let newProjects = _.cloneDeep(projects);
             newProjects[newProject] = [];
             setProjects(newProjects);
+            setNewProject("");
         } else {
             setProjectAlert(true);
             window.setTimeout(() => {
